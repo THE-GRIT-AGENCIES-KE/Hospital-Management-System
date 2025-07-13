@@ -311,62 +311,10 @@ IMALEX HMS is available as a complete, ready-to-deploy enterprise solution with 
 
 ## ⚙️ **Configuration**
 
-### 🔧 **Environment Variables**
-
-```bash
-# Database Configuration
-DB_TYPE=mysql
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=imalex_hms
-DB_USER=hms_user
-DB_PASSWORD=secure_password
-
-# Backup Database
-BACKUP_DB_TYPE=postgresql
-BACKUP_DB_HOST=localhost
-BACKUP_DB_PORT=5432
-BACKUP_DB_NAME=imalex_hms_backup
-BACKUP_DB_USER=hms_backup_user
-BACKUP_DB_PASSWORD=backup_password
-
-# Redis Configuration
-REDIS_HOST=localhost
-REDIS_PORT=6379
-REDIS_DB=0
-
-# Application Settings
-SECRET_KEY=your-secret-key-here
-DEBUG=False
-ENVIRONMENT=production
-
-# Payment Gateway
-MPESA_CONSUMER_KEY=your-mpesa-consumer-key
-MPESA_CONSUMER_SECRET=your-mpesa-consumer-secret
-MPESA_BUSINESS_SHORTCODE=your-shortcode
-MPESA_PASSKEY=your-mpesa-passkey
-
-# File Upload Settings
-UPLOAD_FOLDER=/var/imalex_hms_uploads
-MAX_FILE_SIZE=10MB
-ALLOWED_EXTENSIONS=pdf,jpg,jpeg,png,doc,docx
-
-# Email Configuration
-MAIL_SERVER=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USE_TLS=True
-MAIL_USERNAME=your-email@gmail.com
-MAIL_PASSWORD=your-app-password
-
-# SMS Configuration
-SMS_PROVIDER=africastalking
-SMS_API_KEY=your-sms-api-key
-SMS_USERNAME=your-sms-username
-```
 
 ### 🏥 **System Settings Panel**
 
-Access the admin panel at `http://your-server-ip:5000/admin/settings`
+
 
 - **Hospital Information**
   - Hospital name and logo
@@ -408,101 +356,8 @@ Nurse Access: nurse@imalex.com / nurse123
 - **Web Mobile**: Optimized for mobile browsers
 
 #### 🎥 **Video Walkthrough**
-- **System Overview**: [Watch 5-minute demo](https://youtube.com/watch?v=demo-video)
-- **Patient Flow**: [Complete workflow demo](https://youtube.com/watch?v=workflow-demo)
-- **Admin Features**: [Administrative functions](https://youtube.com/watch?v=admin-demo)
 
-#### 2. **Create Your First Patient**
-```python
-# Via Web Interface
-1. Navigate to "Patient Registration"
-2. Fill patient details
-3. Upload patient photo (optional)
-4. Save patient profile
 
-# Via API
-curl -X POST http://192.168.1.100:5000/api/patients \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer your-jwt-token" \
-  -d '{
-    "first_name": "John",
-    "last_name": "Doe",
-    "phone": "+254712345678",
-    "date_of_birth": "1990-01-01",
-    "gender": "Male",
-    "address": "123 Main St, Nairobi"
-  }'
-```
-
-#### 3. **Process a Visit**
-```python
-# Start a new visit
-POST /api/visits
-{
-  "patient_id": 123,
-  "visit_type": "consultation",
-  "payment_method": "cash",
-  "consultation_fee": 1000
-}
-
-# Add triage data
-POST /api/visits/456/triage
-{
-  "blood_pressure": "120/80",
-  "temperature": "37.2",
-  "weight": "70",
-  "symptoms": "Headache, fever"
-}
-
-# Doctor consultation
-POST /api/visits/456/consultation
-{
-  "diagnosis": "Malaria",
-  "treatment_plan": "Artemether-lumefantrine",
-  "lab_orders": ["Blood film", "FBC"]
-}
-```
-
-### 📊 **API Examples**
-
-#### **Authentication**
-```bash
-# Login
-curl -X POST http://192.168.1.100:5000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{
-    "username": "doctor@imalex.com",
-    "password": "password123"
-  }'
-```
-
-#### **Patient Management**
-```bash
-# Get all patients
-curl -X GET http://192.168.1.100:5000/api/patients \
-  -H "Authorization: Bearer your-jwt-token"
-
-# Search patients
-curl -X GET "http://192.168.1.100:5000/api/patients?search=John" \
-  -H "Authorization: Bearer your-jwt-token"
-
-# Get patient details
-curl -X GET http://192.168.1.100:5000/api/patients/123 \
-  -H "Authorization: Bearer your-jwt-token"
-```
-
-#### **Visit Management**
-```bash
-# Get current queue
-curl -X GET http://192.168.1.100:5000/api/queue \
-  -H "Authorization: Bearer your-jwt-token"
-
-# Complete visit
-curl -X POST http://192.168.1.100:5000/api/visits/456/complete \
-  -H "Authorization: Bearer your-jwt-token"
-```
-
----
 
 ## 🔒 **Security Features**
 
@@ -750,7 +605,7 @@ To revolutionize healthcare management through cutting-edge technology solutions
 ### 📞 **Contact Us**
 - **Website**: [www.gritagencies.com](https://www.gritagencies.com)
 - **Email**: info@gritagencies.com
-- **Phone**: +254 700 000 000
+- **Phone**: +254 743 269 238
 - **Address**: Nairobi, Kenya
 
 ---
